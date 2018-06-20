@@ -1,0 +1,503 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CFLAGS	Makefile	/^CFLAGS :=$/;"	m
+CPPFLAGS	Makefile	/^CPPFLAGS := -g -Wall -std=c++0x$/;"	m
+CXX	Makefile	/^CXX = g++$/;"	m
+CommandOption	command_option.h	/^class CommandOption$/;"	c
+CommandOption::Option	command_option.h	/^    struct Option$/;"	s	class:CommandOption	access:private
+CommandOption::Option::arg	command_option.h	/^        bool arg;$/;"	m	struct:CommandOption::Option	access:public
+CommandOption::Option::handler	command_option.h	/^        HandleOption handler;$/;"	m	struct:CommandOption::Option	access:public
+CommandOption::Option::name	command_option.h	/^        string name;$/;"	m	struct:CommandOption::Option	access:public
+CommandOption::Option::tip	command_option.h	/^        string tip;$/;"	m	struct:CommandOption::Option	access:public
+CommandOption::_options	command_option.h	/^    map<char, struct Option> _options;$/;"	m	class:CommandOption	access:private
+CommandOption::parse	command_option.h	/^    int parse(int argc, char *argv[])$/;"	f	class:CommandOption	access:public	signature:(int argc, char *argv[])
+CommandOption::registerOption	command_option.h	/^    CommandOption *registerOption(const char *optionName, bool arg, HandleOption handler, const char *tip = 0)$/;"	f	class:CommandOption	access:public	signature:(const char *optionName, bool arg, HandleOption handler, const char *tip = 0)
+DEPS	Makefile	/^DEPS = $(patsubst %.o,%.d,$(OBJS))$/;"	m
+HandleOption	command_option.h	/^typedef int (*HandleOption)(char *opt);$/;"	t
+ITcpParser	tcp_packet.h	/^class ITcpParser$/;"	c
+ITcpParser::parse	tcp_packet.h	/^	virtual void parse(unsigned char *buffer, unsigned int size, TcpParserHandler *handler) = 0;$/;"	p	class:ITcpParser	access:public	signature:(unsigned char *buffer, unsigned int size, TcpParserHandler *handler)
+ITcpServerHandler	tcp_server.h	/^class ITcpServerHandler$/;"	c
+ITcpServerHandler::create	tcp_server.h	/^	virtual TcpServerClient *create(const char *server, unsigned short port, int conn)	= 0;$/;"	p	class:ITcpServerHandler	access:public	signature:(const char *server, unsigned short port, int conn)
+LDFLAGS	Makefile	/^LDFLAGS := -lrt$/;"	m
+MULTICASTER_OPCODE_BOARDCAST	multicaster.h	13;"	d
+MULTICASTER_OPCODE_BOARDCAST_UDP	multicaster.h	15;"	d
+MULTICASTER_OPCODE_MULTICAST	multicaster.h	12;"	d
+MULTICASTER_OPCODE_MULTICAST_UDP	multicaster.h	14;"	d
+MULTICASTER_OPCODE_REGISTER	multicaster.h	11;"	d
+MulticasterClient	multicaster.cpp	/^MulticasterClient::MulticasterClient(const char *server, unsigned short port, int fp):TcpServerClient(server, port, fp)$/;"	f	class:MulticasterClient	signature:(const char *server, unsigned short port, int fp)
+MulticasterClient	multicaster.h	/^	MulticasterClient(const char *server, unsigned short port, int fp);$/;"	p	class:MulticasterClient	access:public	signature:(const char *server, unsigned short port, int fp)
+MulticasterClient	multicaster.h	/^	MulticasterClient(const char *server, unsigned short port, int fp);$/;"	p	class:MulticasterClient	signature:(const char *server, unsigned short port, int fp)
+MulticasterClient	multicaster.h	/^class MulticasterClient : public TcpServerClient$/;"	c
+MulticasterClient	multicaster.h	/^class MulticasterClient : public TcpServerClient$/;"	c	inherits:TcpServerClient
+MulticasterClient::MulticasterClient	multicaster.cpp	/^MulticasterClient::MulticasterClient(const char *server, unsigned short port, int fp):TcpServerClient(server, port, fp)$/;"	f	class:MulticasterClient	signature:(const char *server, unsigned short port, int fp)
+MulticasterClient::MulticasterClient	multicaster.h	/^	MulticasterClient(const char *server, unsigned short port, int fp);$/;"	p	class:MulticasterClient	access:public	signature:(const char *server, unsigned short port, int fp)
+MulticasterClient::_parser	multicaster.h	/^	TcpParser141 _parser;$/;"	m	class:MulticasterClient	access:private
+MulticasterClient::_userId	multicaster.h	/^	string _userId;$/;"	m	class:MulticasterClient	access:private
+MulticasterClient::onClose	multicaster.cpp	/^void MulticasterClient::onClose()$/;"	f	class:MulticasterClient	signature:()
+MulticasterClient::onClose	multicaster.h	/^	virtual void onClose();$/;"	p	class:MulticasterClient	access:private	signature:()
+MulticasterClient::onPacket	multicaster.cpp	/^void MulticasterClient::onPacket(unsigned char *buffer, unsigned int size)$/;"	f	class:MulticasterClient	signature:(unsigned char *buffer, unsigned int size)
+MulticasterClient::onPacket	multicaster.h	/^	virtual void onPacket(unsigned char *buffer, unsigned int size);$/;"	p	class:MulticasterClient	access:private	signature:(unsigned char *buffer, unsigned int size)
+MulticasterClient::parser	multicaster.h	/^	virtual ITcpParser *parser() {return &_parser;};$/;"	f	class:MulticasterClient	access:public	signature:()
+MulticasterParser	multicaster.h	/^class MulticasterParser$/;"	c
+MulticasterParser::boardcast	multicaster.cpp	/^int MulticasterParser::boardcast(unsigned char *buffer, unsigned int size)$/;"	f	class:MulticasterParser	signature:(unsigned char *buffer, unsigned int size)
+MulticasterParser::boardcast	multicaster.h	/^	static int boardcast(unsigned char *buffer, unsigned int size);$/;"	p	class:MulticasterParser	access:public	signature:(unsigned char *buffer, unsigned int size)
+MulticasterParser::boardcastUdp	multicaster.h	/^	static int boardcastUdp(unsigned char *buffer, unsigned int size);$/;"	p	class:MulticasterParser	access:public	signature:(unsigned char *buffer, unsigned int size)
+MulticasterParser::multicast	multicaster.cpp	/^int MulticasterParser::multicast(unsigned char *buffer, unsigned int len)$/;"	f	class:MulticasterParser	signature:(unsigned char *buffer, unsigned int len)
+MulticasterParser::multicast	multicaster.h	/^	static int multicast(unsigned char *buffer, unsigned int size);$/;"	p	class:MulticasterParser	access:public	signature:(unsigned char *buffer, unsigned int size)
+MulticasterParser::multicastUdp	multicaster.h	/^	static int multicastUdp(unsigned char *buffer, unsigned int size);$/;"	p	class:MulticasterParser	access:public	signature:(unsigned char *buffer, unsigned int size)
+MulticasterRelayFrom	multicaster.cpp	/^MulticasterRelayFrom::MulticasterRelayFrom(const char *server, unsigned short port, int fp):TcpServerClient(server, port, fp)$/;"	f	class:MulticasterRelayFrom	signature:(const char *server, unsigned short port, int fp)
+MulticasterRelayFrom	multicaster.h	/^	MulticasterRelayFrom(const char *server, unsigned short port, int fp);$/;"	p	class:MulticasterRelayFrom	access:public	signature:(const char *server, unsigned short port, int fp)
+MulticasterRelayFrom	multicaster.h	/^	MulticasterRelayFrom(const char *server, unsigned short port, int fp);$/;"	p	class:MulticasterRelayFrom	signature:(const char *server, unsigned short port, int fp)
+MulticasterRelayFrom	multicaster.h	/^class MulticasterRelayFrom : public TcpServerClient$/;"	c
+MulticasterRelayFrom	multicaster.h	/^class MulticasterRelayFrom : public TcpServerClient$/;"	c	inherits:TcpServerClient
+MulticasterRelayFrom::MulticasterRelayFrom	multicaster.cpp	/^MulticasterRelayFrom::MulticasterRelayFrom(const char *server, unsigned short port, int fp):TcpServerClient(server, port, fp)$/;"	f	class:MulticasterRelayFrom	signature:(const char *server, unsigned short port, int fp)
+MulticasterRelayFrom::MulticasterRelayFrom	multicaster.h	/^	MulticasterRelayFrom(const char *server, unsigned short port, int fp);$/;"	p	class:MulticasterRelayFrom	access:public	signature:(const char *server, unsigned short port, int fp)
+MulticasterRelayFrom::_froms	multicaster.cpp	/^deque<MulticasterRelayFrom *> MulticasterRelayFrom::_froms;$/;"	m	class:MulticasterRelayFrom	file:
+MulticasterRelayFrom::_froms	multicaster.h	/^	static deque<MulticasterRelayFrom *> _froms;$/;"	m	class:MulticasterRelayFrom	access:private
+MulticasterRelayFrom::_parser	multicaster.h	/^	TcpParser141 _parser;$/;"	m	class:MulticasterRelayFrom	access:private
+MulticasterRelayFrom::onClose	multicaster.cpp	/^void MulticasterRelayFrom::onClose()$/;"	f	class:MulticasterRelayFrom	signature:()
+MulticasterRelayFrom::onClose	multicaster.h	/^	virtual void onClose();$/;"	p	class:MulticasterRelayFrom	access:private	signature:()
+MulticasterRelayFrom::onPacket	multicaster.cpp	/^void MulticasterRelayFrom::onPacket(unsigned char *buffer, unsigned int size)$/;"	f	class:MulticasterRelayFrom	signature:(unsigned char *buffer, unsigned int size)
+MulticasterRelayFrom::onPacket	multicaster.h	/^	virtual void onPacket(unsigned char *buffer, unsigned int size);$/;"	p	class:MulticasterRelayFrom	access:private	signature:(unsigned char *buffer, unsigned int size)
+MulticasterRelayFrom::parser	multicaster.h	/^	virtual ITcpParser *parser() {return &_parser;}$/;"	f	class:MulticasterRelayFrom	access:public	signature:()
+MulticasterRelayFrom::relay	multicaster.cpp	/^void MulticasterRelayFrom::relay(unsigned char *buffer, unsigned int size)$/;"	f	class:MulticasterRelayFrom	signature:(unsigned char *buffer, unsigned int size)
+MulticasterRelayFrom::relay	multicaster.h	/^	static void relay(unsigned char *buffer, unsigned int size);$/;"	p	class:MulticasterRelayFrom	access:public	signature:(unsigned char *buffer, unsigned int size)
+MulticasterRelayTo	multicaster.cpp	/^MulticasterRelayTo::MulticasterRelayTo(const char *server, unsigned short port):TcpClient(server, port)$/;"	f	class:MulticasterRelayTo	signature:(const char *server, unsigned short port)
+MulticasterRelayTo	multicaster.h	/^	MulticasterRelayTo(const char *server, unsigned short port);$/;"	p	class:MulticasterRelayTo	access:public	signature:(const char *server, unsigned short port)
+MulticasterRelayTo	multicaster.h	/^	MulticasterRelayTo(const char *server, unsigned short port);$/;"	p	class:MulticasterRelayTo	signature:(const char *server, unsigned short port)
+MulticasterRelayTo	multicaster.h	/^class MulticasterRelayTo : public TcpClient$/;"	c
+MulticasterRelayTo	multicaster.h	/^class MulticasterRelayTo : public TcpClient$/;"	c	inherits:TcpClient
+MulticasterRelayTo::MulticasterRelayTo	multicaster.cpp	/^MulticasterRelayTo::MulticasterRelayTo(const char *server, unsigned short port):TcpClient(server, port)$/;"	f	class:MulticasterRelayTo	signature:(const char *server, unsigned short port)
+MulticasterRelayTo::MulticasterRelayTo	multicaster.h	/^	MulticasterRelayTo(const char *server, unsigned short port);$/;"	p	class:MulticasterRelayTo	access:public	signature:(const char *server, unsigned short port)
+MulticasterRelayTo::_parser	multicaster.h	/^	TcpParser141 _parser;$/;"	m	class:MulticasterRelayTo	access:protected
+MulticasterRelayTo::_tos	multicaster.cpp	/^deque<MulticasterRelayTo *> MulticasterRelayTo::_tos;$/;"	m	class:MulticasterRelayTo	file:
+MulticasterRelayTo::_tos	multicaster.h	/^	static deque<MulticasterRelayTo *> _tos;$/;"	m	class:MulticasterRelayTo	access:protected
+MulticasterRelayTo::onClose	multicaster.cpp	/^void MulticasterRelayTo::onClose()$/;"	f	class:MulticasterRelayTo	signature:()
+MulticasterRelayTo::onClose	multicaster.h	/^	virtual void onClose();$/;"	p	class:MulticasterRelayTo	access:protected	signature:()
+MulticasterRelayTo::onPacket	multicaster.cpp	/^void MulticasterRelayTo::onPacket(unsigned char *buffer, unsigned int size)$/;"	f	class:MulticasterRelayTo	signature:(unsigned char *buffer, unsigned int size)
+MulticasterRelayTo::onPacket	multicaster.h	/^	virtual void onPacket(unsigned char *buffer, unsigned int size);$/;"	p	class:MulticasterRelayTo	access:protected	signature:(unsigned char *buffer, unsigned int size)
+MulticasterRelayTo::parser	multicaster.h	/^	virtual ITcpParser *parser() {return &_parser;}$/;"	f	class:MulticasterRelayTo	access:public	signature:()
+MulticasterRelayTo::relay	multicaster.cpp	/^void MulticasterRelayTo::relay(unsigned char *buffer, unsigned int size)$/;"	f	class:MulticasterRelayTo	signature:(unsigned char *buffer, unsigned int size)
+MulticasterRelayTo::relay	multicaster.h	/^	static void relay(unsigned char *buffer, unsigned int size);$/;"	p	class:MulticasterRelayTo	access:public	signature:(unsigned char *buffer, unsigned int size)
+MulticasterUdpServer	multicaster.cpp	/^MulticasterUdpServer::MulticasterUdpServer(const char *server, unsigned short port):UdpBase(server, port)$/;"	f	class:MulticasterUdpServer	signature:(const char *server, unsigned short port)
+MulticasterUdpServer	multicaster.h	/^	MulticasterUdpServer(const char *server, unsigned short port);$/;"	p	class:MulticasterUdpServer	access:public	signature:(const char *server, unsigned short port)
+MulticasterUdpServer	multicaster.h	/^	MulticasterUdpServer(const char *server, unsigned short port);$/;"	p	class:MulticasterUdpServer	signature:(const char *server, unsigned short port)
+MulticasterUdpServer	multicaster.h	/^class MulticasterUdpServer : public UdpBase$/;"	c
+MulticasterUdpServer	multicaster.h	/^class MulticasterUdpServer : public UdpBase$/;"	c	inherits:UdpBase
+MulticasterUdpServer::MulticasterUdpServer	multicaster.cpp	/^MulticasterUdpServer::MulticasterUdpServer(const char *server, unsigned short port):UdpBase(server, port)$/;"	f	class:MulticasterUdpServer	signature:(const char *server, unsigned short port)
+MulticasterUdpServer::MulticasterUdpServer	multicaster.h	/^	MulticasterUdpServer(const char *server, unsigned short port);$/;"	p	class:MulticasterUdpServer	access:public	signature:(const char *server, unsigned short port)
+MulticasterUdpServer::_port	multicaster.h	/^	unsigned short _port;$/;"	m	class:MulticasterUdpServer	access:private
+MulticasterUdpServer::_server	multicaster.h	/^	string _server;$/;"	m	class:MulticasterUdpServer	access:private
+MulticasterUdpServer::onPacket	multicaster.cpp	/^void MulticasterUdpServer::onPacket(unsigned char *buffer, unsigned int size, struct sockaddr *sa)$/;"	f	class:MulticasterUdpServer	signature:(unsigned char *buffer, unsigned int size, struct sockaddr *sa)
+MulticasterUdpServer::onPacket	multicaster.h	/^	virtual void onPacket(unsigned char *buffer, unsigned int size, struct sockaddr *sa);$/;"	p	class:MulticasterUdpServer	access:protected	signature:(unsigned char *buffer, unsigned int size, struct sockaddr *sa)
+NetBase	net_base.cpp	/^NetBase::NetBase()$/;"	f	class:NetBase	signature:()
+NetBase	net_base.h	/^	NetBase();$/;"	p	class:NetBase	access:public	signature:()
+NetBase	net_base.h	/^	NetBase();$/;"	p	class:NetBase	signature:()
+NetBase	net_base.h	/^class NetBase$/;"	c
+NetBase::NetBase	net_base.cpp	/^NetBase::NetBase()$/;"	f	class:NetBase	signature:()
+NetBase::NetBase	net_base.h	/^	NetBase();$/;"	p	class:NetBase	access:public	signature:()
+NetBase::_bases	net_base.cpp	/^map<int, NetBase *> NetBase::_bases;$/;"	m	class:NetBase	file:
+NetBase::_bases	net_base.h	/^	static map<int, NetBase *> _bases;$/;"	m	class:NetBase	access:private
+NetBase::_fp	net_base.h	/^	int _fp;$/;"	m	class:NetBase	access:protected
+NetBase::_fpEpoll	net_base.cpp	/^int NetBase::_fpEpoll;$/;"	m	class:NetBase	file:
+NetBase::_fpEpoll	net_base.h	/^	static int _fpEpoll;$/;"	m	class:NetBase	access:private
+NetBase::_packet	net_base.h	/^	Packet *_packet;$/;"	m	class:NetBase	access:private
+NetBase::_packets	net_base.h	/^	deque<Packet *> _packets;$/;"	m	class:NetBase	access:private
+NetBase::_pos	net_base.h	/^	unsigned int _pos;$/;"	m	class:NetBase	access:private
+NetBase::close	net_base.cpp	/^void NetBase::close()$/;"	f	class:NetBase	signature:()
+NetBase::close	net_base.h	/^	void close();$/;"	p	class:NetBase	access:public	signature:()
+NetBase::onClose	net_base.cpp	/^void NetBase::onClose()$/;"	f	class:NetBase	signature:()
+NetBase::onClose	net_base.h	/^	virtual void onClose();$/;"	p	class:NetBase	access:protected	signature:()
+NetBase::onRecv	net_base.h	/^	virtual void onRecv() {}$/;"	f	class:NetBase	access:protected	signature:()
+NetBase::onSend	net_base.cpp	/^void NetBase::onSend()$/;"	f	class:NetBase	signature:()
+NetBase::onSend	net_base.h	/^	virtual int onSend(unsigned char *buffer, unsigned int size, Packet *packet) {return 0;}$/;"	f	class:NetBase	access:protected	signature:(unsigned char *buffer, unsigned int size, Packet *packet)
+NetBase::onSend	net_base.h	/^	void onSend();$/;"	p	class:NetBase	access:protected	signature:()
+NetBase::run	net_base.cpp	/^void NetBase::run()$/;"	f	class:NetBase	signature:()
+NetBase::run	net_base.h	/^	static void run();$/;"	p	class:NetBase	access:public	signature:()
+NetBase::send	net_base.cpp	/^void NetBase::send(Packet *packet)$/;"	f	class:NetBase	signature:(Packet *packet)
+NetBase::send	net_base.h	/^	void send(Packet *packet);$/;"	p	class:NetBase	access:public	signature:(Packet *packet)
+NetBase::start	net_base.cpp	/^void NetBase::start(int fp)$/;"	f	class:NetBase	signature:(int fp)
+NetBase::start	net_base.h	/^	void start(int fp);$/;"	p	class:NetBase	access:protected	signature:(int fp)
+NetBase::~NetBase	net_base.cpp	/^NetBase::~NetBase()$/;"	f	class:NetBase	signature:()
+NetBase::~NetBase	net_base.h	/^	virtual ~NetBase();$/;"	p	class:NetBase	access:public	signature:()
+OBJDIR	Makefile	/^OBJDIR	:= obj$/;"	m
+OBJDIRS	Makefile	/^OBJDIRS	= $(sort $(dir $(OBJS)))$/;"	m
+OBJS	Makefile	/^OBJS = $(foreach x,$(SRCEXTS), $(patsubst .\/%$(x),$(OBJDIR)\/%.o,$(filter %$(x),$(SOURCES))))$/;"	m
+Option	command_option.h	/^    struct Option$/;"	s	class:CommandOption
+Option	command_option.h	/^    struct Option$/;"	s	class:CommandOption	access:private
+PROGRAM	Makefile	/^PROGRAM := multicaster $/;"	m
+Packet	packet.h	/^class Packet$/;"	c
+Packet::_ref	packet.h	/^	int _ref;$/;"	m	class:Packet	access:private
+Packet::addRef	packet.h	/^	void addRef() {_ref++;}$/;"	f	class:Packet	access:public	signature:()
+Packet::data	packet.h	/^	virtual unsigned char *data()	= 0;$/;"	p	class:Packet	access:public	signature:()
+Packet::length	packet.h	/^	virtual unsigned int length()	= 0;$/;"	p	class:Packet	access:public	signature:()
+Packet::release	packet.h	/^	void release()$/;"	f	class:Packet	access:public	signature:()
+RM	Makefile	/^RM = rm -rf$/;"	m
+SHELL	Makefile	/^SHELL = \/bin\/sh$/;"	m
+SOURCES	Makefile	/^SOURCES = $(shell find .\/ -name "*.cpp")$/;"	m
+SRCEXTS	Makefile	/^SRCEXTS := .cpp$/;"	m
+STLFOR	utility.h	8;"	d
+TCPPROCOTOL_STATE_BODY	tcp_packet.h	/^	static const unsigned char TCPPROCOTOL_STATE_BODY = 3;$/;"	m	class:TcpParser141
+TCPPROCOTOL_STATE_BODY	tcp_packet.h	/^	static const unsigned char TCPPROCOTOL_STATE_BODY = 3;$/;"	m	class:TcpParser141	access:private
+TCPPROCOTOL_STATE_CSLENGTH	tcp_packet.h	/^	static const unsigned char TCPPROCOTOL_STATE_CSLENGTH = 2;$/;"	m	class:TcpParser141
+TCPPROCOTOL_STATE_CSLENGTH	tcp_packet.h	/^	static const unsigned char TCPPROCOTOL_STATE_CSLENGTH = 2;$/;"	m	class:TcpParser141	access:private
+TCPPROCOTOL_STATE_HEAD	tcp_packet.h	/^	static const unsigned char TCPPROCOTOL_STATE_HEAD = 0;$/;"	m	class:TcpParser141
+TCPPROCOTOL_STATE_HEAD	tcp_packet.h	/^	static const unsigned char TCPPROCOTOL_STATE_HEAD = 0;$/;"	m	class:TcpParser141	access:private
+TCPPROCOTOL_STATE_LENGTH	tcp_packet.h	/^	static const unsigned char TCPPROCOTOL_STATE_LENGTH = 1;$/;"	m	class:TcpParser141
+TCPPROCOTOL_STATE_LENGTH	tcp_packet.h	/^	static const unsigned char TCPPROCOTOL_STATE_LENGTH = 1;$/;"	m	class:TcpParser141	access:private
+TcpClient	tcp_client.cpp	/^TcpClient::TcpClient(const char *server, unsigned short port):NetBase()$/;"	f	class:TcpClient	signature:(const char *server, unsigned short port)
+TcpClient	tcp_client.h	/^	TcpClient(const char *server, unsigned short port);$/;"	p	class:TcpClient	access:public	signature:(const char *server, unsigned short port)
+TcpClient	tcp_client.h	/^	TcpClient(const char *server, unsigned short port);$/;"	p	class:TcpClient	signature:(const char *server, unsigned short port)
+TcpClient	tcp_client.h	/^class TcpClient : public NetBase, public TcpParserHandler$/;"	c
+TcpClient	tcp_client.h	/^class TcpClient : public NetBase, public TcpParserHandler$/;"	c	inherits:NetBase,TcpParserHandler
+TcpClient::TcpClient	tcp_client.cpp	/^TcpClient::TcpClient(const char *server, unsigned short port):NetBase()$/;"	f	class:TcpClient	signature:(const char *server, unsigned short port)
+TcpClient::TcpClient	tcp_client.h	/^	TcpClient(const char *server, unsigned short port);$/;"	p	class:TcpClient	access:public	signature:(const char *server, unsigned short port)
+TcpClient::_port	tcp_client.h	/^	unsigned short _port;$/;"	m	class:TcpClient	access:protected
+TcpClient::_server	tcp_client.h	/^	string _server;$/;"	m	class:TcpClient	access:protected
+TcpClient::onRecv	tcp_client.cpp	/^void TcpClient::onRecv()$/;"	f	class:TcpClient	signature:()
+TcpClient::onRecv	tcp_client.h	/^	virtual void onRecv();$/;"	p	class:TcpClient	access:protected	signature:()
+TcpClient::onSend	tcp_client.cpp	/^int TcpClient::onSend(unsigned char *buffer, unsigned int size, Packet *packet)$/;"	f	class:TcpClient	signature:(unsigned char *buffer, unsigned int size, Packet *packet)
+TcpClient::onSend	tcp_client.h	/^	virtual int onSend(unsigned char *buffer, unsigned int size, Packet *packet);$/;"	p	class:TcpClient	access:protected	signature:(unsigned char *buffer, unsigned int size, Packet *packet)
+TcpClient::parser	tcp_client.h	/^	virtual ITcpParser *parser()	= 0;$/;"	p	class:TcpClient	access:public	signature:()
+TcpClient::start	tcp_client.cpp	/^void TcpClient::start()$/;"	f	class:TcpClient	signature:()
+TcpClient::start	tcp_client.h	/^	void start();$/;"	p	class:TcpClient	access:public	signature:()
+TcpPacket141	tcp_packet.cpp	/^TcpPacket141::TcpPacket141(unsigned char *buffer, unsigned int size):Packet()$/;"	f	class:TcpPacket141	signature:(unsigned char *buffer, unsigned int size)
+TcpPacket141	tcp_packet.h	/^	TcpPacket141(unsigned char *buffer, unsigned int size);$/;"	p	class:TcpPacket141	access:public	signature:(unsigned char *buffer, unsigned int size)
+TcpPacket141	tcp_packet.h	/^	TcpPacket141(unsigned char *buffer, unsigned int size);$/;"	p	class:TcpPacket141	signature:(unsigned char *buffer, unsigned int size)
+TcpPacket141	tcp_packet.h	/^class TcpPacket141 : public Packet$/;"	c
+TcpPacket141	tcp_packet.h	/^class TcpPacket141 : public Packet$/;"	c	inherits:Packet
+TcpPacket141::TcpPacket141	tcp_packet.cpp	/^TcpPacket141::TcpPacket141(unsigned char *buffer, unsigned int size):Packet()$/;"	f	class:TcpPacket141	signature:(unsigned char *buffer, unsigned int size)
+TcpPacket141::TcpPacket141	tcp_packet.h	/^	TcpPacket141(unsigned char *buffer, unsigned int size);$/;"	p	class:TcpPacket141	access:public	signature:(unsigned char *buffer, unsigned int size)
+TcpPacket141::_buffer	tcp_packet.h	/^	unsigned char *_buffer;$/;"	m	class:TcpPacket141	access:private
+TcpPacket141::_length	tcp_packet.h	/^	unsigned int _length;$/;"	m	class:TcpPacket141	access:private
+TcpPacket141::data	tcp_packet.h	/^	virtual unsigned char *data() {return _buffer;}$/;"	f	class:TcpPacket141	access:public	signature:()
+TcpPacket141::length	tcp_packet.h	/^	virtual unsigned int length() {return _length;}$/;"	f	class:TcpPacket141	access:public	signature:()
+TcpPacket141::~TcpPacket141	tcp_packet.cpp	/^TcpPacket141::~TcpPacket141()$/;"	f	class:TcpPacket141	signature:()
+TcpPacket141::~TcpPacket141	tcp_packet.h	/^	virtual ~TcpPacket141();$/;"	p	class:TcpPacket141	access:public	signature:()
+TcpParser141	tcp_packet.h	/^	TcpParser141()$/;"	f	class:TcpParser141	access:public	signature:()
+TcpParser141	tcp_packet.h	/^	TcpParser141()$/;"	f	class:TcpParser141	signature:()
+TcpParser141	tcp_packet.h	/^class TcpParser141 : public ITcpParser$/;"	c
+TcpParser141	tcp_packet.h	/^class TcpParser141 : public ITcpParser$/;"	c	inherits:ITcpParser
+TcpParser141::TCPPROCOTOL_STATE_BODY	tcp_packet.h	/^	static const unsigned char TCPPROCOTOL_STATE_BODY = 3;$/;"	m	class:TcpParser141	access:private
+TcpParser141::TCPPROCOTOL_STATE_CSLENGTH	tcp_packet.h	/^	static const unsigned char TCPPROCOTOL_STATE_CSLENGTH = 2;$/;"	m	class:TcpParser141	access:private
+TcpParser141::TCPPROCOTOL_STATE_HEAD	tcp_packet.h	/^	static const unsigned char TCPPROCOTOL_STATE_HEAD = 0;$/;"	m	class:TcpParser141	access:private
+TcpParser141::TCPPROCOTOL_STATE_LENGTH	tcp_packet.h	/^	static const unsigned char TCPPROCOTOL_STATE_LENGTH = 1;$/;"	m	class:TcpParser141	access:private
+TcpParser141::TcpParser141	tcp_packet.h	/^	TcpParser141()$/;"	f	class:TcpParser141	access:public	signature:()
+TcpParser141::_buffer	tcp_packet.h	/^	unsigned char *_buffer;$/;"	m	class:TcpParser141	access:private
+TcpParser141::_length	tcp_packet.h	/^	unsigned int _length;$/;"	m	class:TcpParser141	access:private
+TcpParser141::_pos	tcp_packet.h	/^	unsigned int _pos;$/;"	m	class:TcpParser141	access:private
+TcpParser141::_state	tcp_packet.h	/^	unsigned char _state;$/;"	m	class:TcpParser141	access:private
+TcpParser141::parse	tcp_packet.cpp	/^void TcpParser141::parse(unsigned char *buffer, unsigned int size, TcpParserHandler *handler)$/;"	f	class:TcpParser141	signature:(unsigned char *buffer, unsigned int size, TcpParserHandler *handler)
+TcpParser141::parse	tcp_packet.h	/^	virtual void parse(unsigned char *buffer, unsigned int size, TcpParserHandler *handler);$/;"	p	class:TcpParser141	access:public	signature:(unsigned char *buffer, unsigned int size, TcpParserHandler *handler)
+TcpParser141::~TcpParser141	tcp_packet.h	/^	virtual ~TcpParser141()$/;"	f	class:TcpParser141	access:public	signature:()
+TcpParserHandler	tcp_packet.h	/^class TcpParserHandler$/;"	c
+TcpParserHandler::onPacket	tcp_packet.h	/^	virtual void onPacket(unsigned char *buffer, unsigned int size) = 0;$/;"	p	class:TcpParserHandler	access:public	signature:(unsigned char *buffer, unsigned int size)
+TcpServer	tcp_server.cpp	/^TcpServer::TcpServer(const char *server, unsigned short port, ITcpServerHandler *handler):NetBase()$/;"	f	class:TcpServer	signature:(const char *server, unsigned short port, ITcpServerHandler *handler)
+TcpServer	tcp_server.h	/^	TcpServer(const char *server, unsigned short port, ITcpServerHandler *handler);$/;"	p	class:TcpServer	access:public	signature:(const char *server, unsigned short port, ITcpServerHandler *handler)
+TcpServer	tcp_server.h	/^	TcpServer(const char *server, unsigned short port, ITcpServerHandler *handler);$/;"	p	class:TcpServer	signature:(const char *server, unsigned short port, ITcpServerHandler *handler)
+TcpServer	tcp_server.h	/^class TcpServer : public NetBase$/;"	c
+TcpServer	tcp_server.h	/^class TcpServer : public NetBase$/;"	c	inherits:NetBase
+TcpServer::TcpServer	tcp_server.cpp	/^TcpServer::TcpServer(const char *server, unsigned short port, ITcpServerHandler *handler):NetBase()$/;"	f	class:TcpServer	signature:(const char *server, unsigned short port, ITcpServerHandler *handler)
+TcpServer::TcpServer	tcp_server.h	/^	TcpServer(const char *server, unsigned short port, ITcpServerHandler *handler);$/;"	p	class:TcpServer	access:public	signature:(const char *server, unsigned short port, ITcpServerHandler *handler)
+TcpServer::_handler	tcp_server.h	/^	ITcpServerHandler *_handler;$/;"	m	class:TcpServer	access:private
+TcpServer::_port	tcp_server.h	/^	unsigned short _port;$/;"	m	class:TcpServer	access:private
+TcpServer::_server	tcp_server.h	/^	string _server;$/;"	m	class:TcpServer	access:private
+TcpServer::onRecv	tcp_server.cpp	/^void TcpServer::onRecv()$/;"	f	class:TcpServer	signature:()
+TcpServer::onRecv	tcp_server.h	/^	virtual void onRecv();$/;"	p	class:TcpServer	access:protected	signature:()
+TcpServerClient	tcp_server.h	/^	TcpServerClient(const char *server, unsigned short port, int fp):NetBase()$/;"	f	class:TcpServerClient	access:public	signature:(const char *server, unsigned short port, int fp)
+TcpServerClient	tcp_server.h	/^	TcpServerClient(const char *server, unsigned short port, int fp):NetBase()$/;"	f	class:TcpServerClient	signature:(const char *server, unsigned short port, int fp)
+TcpServerClient	tcp_server.h	/^class TcpServerClient : public NetBase, public TcpParserHandler$/;"	c
+TcpServerClient	tcp_server.h	/^class TcpServerClient : public NetBase, public TcpParserHandler$/;"	c	inherits:NetBase,TcpParserHandler
+TcpServerClient::TcpServerClient	tcp_server.h	/^	TcpServerClient(const char *server, unsigned short port, int fp):NetBase()$/;"	f	class:TcpServerClient	access:public	signature:(const char *server, unsigned short port, int fp)
+TcpServerClient::_port	tcp_server.h	/^	unsigned short _port;$/;"	m	class:TcpServerClient	access:protected
+TcpServerClient::_server	tcp_server.h	/^	string _server;$/;"	m	class:TcpServerClient	access:protected
+TcpServerClient::onClose	tcp_server.cpp	/^void TcpServerClient::onClose()$/;"	f	class:TcpServerClient	signature:()
+TcpServerClient::onClose	tcp_server.h	/^	virtual void onClose();$/;"	p	class:TcpServerClient	access:protected	signature:()
+TcpServerClient::onRecv	tcp_server.cpp	/^void TcpServerClient::onRecv()$/;"	f	class:TcpServerClient	signature:()
+TcpServerClient::onRecv	tcp_server.h	/^	virtual void onRecv();$/;"	p	class:TcpServerClient	access:protected	signature:()
+TcpServerClient::onSend	tcp_server.cpp	/^int TcpServerClient::onSend(unsigned char *buffer, unsigned int size, Packet *packet)$/;"	f	class:TcpServerClient	signature:(unsigned char *buffer, unsigned int size, Packet *packet)
+TcpServerClient::onSend	tcp_server.h	/^	virtual int onSend(unsigned char *buffer, unsigned int size, Packet *packet);$/;"	p	class:TcpServerClient	access:protected	signature:(unsigned char *buffer, unsigned int size, Packet *packet)
+TcpServerClient::parser	tcp_server.h	/^	virtual ITcpParser *parser()	= 0;$/;"	p	class:TcpServerClient	access:public	signature:()
+TcpServerHandler	tcp_server.h	/^class TcpServerHandler : public ITcpServerHandler$/;"	c
+TcpServerHandler	tcp_server.h	/^class TcpServerHandler : public ITcpServerHandler$/;"	c	inherits:ITcpServerHandler
+TcpServerHandler::create	tcp_server.h	/^	virtual TcpServerClient *create(const char *server, unsigned short port, int conn) {return new TCPSERVERCLIENT(server, port, conn);}$/;"	f	class:TcpServerHandler	access:public	signature:(const char *server, unsigned short port, int conn)
+UTILITY_H	utility.h	2;"	d
+UdpBase	udp_base.cpp	/^UdpBase::UdpBase(const char *server, unsigned short port)$/;"	f	class:UdpBase	signature:(const char *server, unsigned short port)
+UdpBase	udp_base.h	/^	UdpBase(const char *server = 0, unsigned short port = 0);$/;"	p	class:UdpBase	access:public	signature:(const char *server = 0, unsigned short port = 0)
+UdpBase	udp_base.h	/^	UdpBase(const char *server = 0, unsigned short port = 0);$/;"	p	class:UdpBase	signature:(const char *server = 0, unsigned short port = 0)
+UdpBase	udp_base.h	/^class UdpBase : public NetBase$/;"	c
+UdpBase	udp_base.h	/^class UdpBase : public NetBase$/;"	c	inherits:NetBase
+UdpBase::UdpBase	udp_base.cpp	/^UdpBase::UdpBase(const char *server, unsigned short port)$/;"	f	class:UdpBase	signature:(const char *server, unsigned short port)
+UdpBase::UdpBase	udp_base.h	/^	UdpBase(const char *server = 0, unsigned short port = 0);$/;"	p	class:UdpBase	access:public	signature:(const char *server = 0, unsigned short port = 0)
+UdpBase::_port	udp_base.h	/^	unsigned short _port;$/;"	m	class:UdpBase	access:protected
+UdpBase::_server	udp_base.h	/^	string _server;$/;"	m	class:UdpBase	access:protected
+UdpBase::onPacket	udp_base.h	/^	virtual void onPacket(unsigned char *buffer, unsigned int size, struct sockaddr *sa) {}$/;"	f	class:UdpBase	access:protected	signature:(unsigned char *buffer, unsigned int size, struct sockaddr *sa)
+UdpBase::onRecv	udp_base.cpp	/^void UdpBase::onRecv()$/;"	f	class:UdpBase	signature:()
+UdpBase::onRecv	udp_base.h	/^	virtual void onRecv();$/;"	p	class:UdpBase	access:protected	signature:()
+UdpBase::onSend	udp_base.cpp	/^int UdpBase::onSend(unsigned char *buffer, unsigned int size, Packet *packet)$/;"	f	class:UdpBase	signature:(unsigned char *buffer, unsigned int size, Packet *packet)
+UdpBase::onSend	udp_base.h	/^	virtual int onSend(unsigned char *buffer, unsigned int size, Packet *packet);$/;"	p	class:UdpBase	access:protected	signature:(unsigned char *buffer, unsigned int size, Packet *packet)
+UdpPacket	udp_base.h	/^	UdpPacket(unsigned char *buffer, unsigned int len, const char *server, unsigned short port):Packet()$/;"	f	class:UdpPacket	access:public	signature:(unsigned char *buffer, unsigned int len, const char *server, unsigned short port)
+UdpPacket	udp_base.h	/^	UdpPacket(unsigned char *buffer, unsigned int len, const char *server, unsigned short port):Packet()$/;"	f	class:UdpPacket	signature:(unsigned char *buffer, unsigned int len, const char *server, unsigned short port)
+UdpPacket	udp_base.h	/^	UdpPacket(unsigned char *buffer, unsigned int len, struct sockaddr *sa):Packet()$/;"	f	class:UdpPacket	access:public	signature:(unsigned char *buffer, unsigned int len, struct sockaddr *sa)
+UdpPacket	udp_base.h	/^	UdpPacket(unsigned char *buffer, unsigned int len, struct sockaddr *sa):Packet()$/;"	f	class:UdpPacket	signature:(unsigned char *buffer, unsigned int len, struct sockaddr *sa)
+UdpPacket	udp_base.h	/^class UdpPacket : public Packet$/;"	c
+UdpPacket	udp_base.h	/^class UdpPacket : public Packet$/;"	c	inherits:Packet
+UdpPacket::UdpPacket	udp_base.h	/^	UdpPacket(unsigned char *buffer, unsigned int len, const char *server, unsigned short port):Packet()$/;"	f	class:UdpPacket	access:public	signature:(unsigned char *buffer, unsigned int len, const char *server, unsigned short port)
+UdpPacket::UdpPacket	udp_base.h	/^	UdpPacket(unsigned char *buffer, unsigned int len, struct sockaddr *sa):Packet()$/;"	f	class:UdpPacket	access:public	signature:(unsigned char *buffer, unsigned int len, struct sockaddr *sa)
+UdpPacket::_buffer	udp_base.h	/^	unsigned char _buffer[1024];$/;"	m	class:UdpPacket	access:private
+UdpPacket::_length	udp_base.h	/^	unsigned int _length;$/;"	m	class:UdpPacket	access:private
+UdpPacket::_sa	udp_base.h	/^	struct sockaddr_in _sa;$/;"	m	class:UdpPacket	typeref:struct:UdpPacket::sockaddr_in	access:private
+UdpPacket::data	udp_base.h	/^	virtual unsigned char *data() {return _buffer;}$/;"	f	class:UdpPacket	access:public	signature:()
+UdpPacket::length	udp_base.h	/^	virtual unsigned int length() {return _length;}$/;"	f	class:UdpPacket	access:public	signature:()
+UdpPacket::release	udp_base.h	/^	virtual void release()$/;"	f	class:UdpPacket	access:public	signature:()
+UdpPacket::saAddr	udp_base.h	/^	struct sockaddr *saAddr() {return (struct sockaddr *)&_sa;}$/;"	f	class:UdpPacket	access:public	signature:()
+__COMMAND_OPTIONS_H__	command_option.h	2;"	d
+__MULTICASTER_H__	multicaster.h	2;"	d
+__NET_BASE_H__	net_base.h	2;"	d
+__PACKET_H__	packet.h	2;"	d
+__TCP_CLIENT_H__	tcp_client.h	2;"	d
+__TCP_PACKET_H__	tcp_packet.h	2;"	d
+__TCP_SERVER_H__	tcp_server.h	2;"	d
+__UDP_BASE_H__	udp_base.h	2;"	d
+_bases	net_base.cpp	/^map<int, NetBase *> NetBase::_bases;$/;"	m	class:NetBase	file:
+_bases	net_base.h	/^	static map<int, NetBase *> _bases;$/;"	m	class:NetBase
+_bases	net_base.h	/^	static map<int, NetBase *> _bases;$/;"	m	class:NetBase	access:private
+_buffer	tcp_packet.h	/^	unsigned char *_buffer;$/;"	m	class:TcpPacket141
+_buffer	tcp_packet.h	/^	unsigned char *_buffer;$/;"	m	class:TcpPacket141	access:private
+_buffer	tcp_packet.h	/^	unsigned char *_buffer;$/;"	m	class:TcpParser141
+_buffer	tcp_packet.h	/^	unsigned char *_buffer;$/;"	m	class:TcpParser141	access:private
+_buffer	udp_base.h	/^	unsigned char _buffer[1024];$/;"	m	class:UdpPacket
+_buffer	udp_base.h	/^	unsigned char _buffer[1024];$/;"	m	class:UdpPacket	access:private
+_clients	multicaster.cpp	/^unordered_map<string, MulticasterClient *> _clients;$/;"	v
+_fp	net_base.h	/^	int _fp;$/;"	m	class:NetBase
+_fp	net_base.h	/^	int _fp;$/;"	m	class:NetBase	access:protected
+_fpEpoll	net_base.cpp	/^int NetBase::_fpEpoll;$/;"	m	class:NetBase	file:
+_fpEpoll	net_base.h	/^	static int _fpEpoll;$/;"	m	class:NetBase
+_fpEpoll	net_base.h	/^	static int _fpEpoll;$/;"	m	class:NetBase	access:private
+_froms	multicaster.cpp	/^deque<MulticasterRelayFrom *> MulticasterRelayFrom::_froms;$/;"	m	class:MulticasterRelayFrom	file:
+_froms	multicaster.h	/^	static deque<MulticasterRelayFrom *> _froms;$/;"	m	class:MulticasterRelayFrom
+_froms	multicaster.h	/^	static deque<MulticasterRelayFrom *> _froms;$/;"	m	class:MulticasterRelayFrom	access:private
+_handler	tcp_server.h	/^	ITcpServerHandler *_handler;$/;"	m	class:TcpServer
+_handler	tcp_server.h	/^	ITcpServerHandler *_handler;$/;"	m	class:TcpServer	access:private
+_hearts	multicaster.cpp	/^unordered_map<string, int> _hearts;$/;"	v
+_length	tcp_packet.h	/^	unsigned int _length;$/;"	m	class:TcpPacket141
+_length	tcp_packet.h	/^	unsigned int _length;$/;"	m	class:TcpPacket141	access:private
+_length	tcp_packet.h	/^	unsigned int _length;$/;"	m	class:TcpParser141
+_length	tcp_packet.h	/^	unsigned int _length;$/;"	m	class:TcpParser141	access:private
+_length	udp_base.h	/^	unsigned int _length;$/;"	m	class:UdpPacket
+_length	udp_base.h	/^	unsigned int _length;$/;"	m	class:UdpPacket	access:private
+_options	command_option.h	/^    map<char, struct Option> _options;$/;"	m	class:CommandOption
+_options	command_option.h	/^    map<char, struct Option> _options;$/;"	m	class:CommandOption	access:private
+_packet	net_base.h	/^	Packet *_packet;$/;"	m	class:NetBase
+_packet	net_base.h	/^	Packet *_packet;$/;"	m	class:NetBase	access:private
+_packets	net_base.h	/^	deque<Packet *> _packets;$/;"	m	class:NetBase
+_packets	net_base.h	/^	deque<Packet *> _packets;$/;"	m	class:NetBase	access:private
+_parser	multicaster.h	/^	TcpParser141 _parser;$/;"	m	class:MulticasterClient
+_parser	multicaster.h	/^	TcpParser141 _parser;$/;"	m	class:MulticasterClient	access:private
+_parser	multicaster.h	/^	TcpParser141 _parser;$/;"	m	class:MulticasterRelayFrom
+_parser	multicaster.h	/^	TcpParser141 _parser;$/;"	m	class:MulticasterRelayFrom	access:private
+_parser	multicaster.h	/^	TcpParser141 _parser;$/;"	m	class:MulticasterRelayTo
+_parser	multicaster.h	/^	TcpParser141 _parser;$/;"	m	class:MulticasterRelayTo	access:protected
+_port	multicaster.h	/^	unsigned short _port;$/;"	m	class:MulticasterUdpServer
+_port	multicaster.h	/^	unsigned short _port;$/;"	m	class:MulticasterUdpServer	access:private
+_port	tcp_client.h	/^	unsigned short _port;$/;"	m	class:TcpClient
+_port	tcp_client.h	/^	unsigned short _port;$/;"	m	class:TcpClient	access:protected
+_port	tcp_server.h	/^	unsigned short _port;$/;"	m	class:TcpServer
+_port	tcp_server.h	/^	unsigned short _port;$/;"	m	class:TcpServer	access:private
+_port	tcp_server.h	/^	unsigned short _port;$/;"	m	class:TcpServerClient
+_port	tcp_server.h	/^	unsigned short _port;$/;"	m	class:TcpServerClient	access:protected
+_port	udp_base.h	/^	unsigned short _port;$/;"	m	class:UdpBase
+_port	udp_base.h	/^	unsigned short _port;$/;"	m	class:UdpBase	access:protected
+_pos	net_base.h	/^	unsigned int _pos;$/;"	m	class:NetBase
+_pos	net_base.h	/^	unsigned int _pos;$/;"	m	class:NetBase	access:private
+_pos	tcp_packet.h	/^	unsigned int _pos;$/;"	m	class:TcpParser141
+_pos	tcp_packet.h	/^	unsigned int _pos;$/;"	m	class:TcpParser141	access:private
+_ref	packet.h	/^	int _ref;$/;"	m	class:Packet
+_ref	packet.h	/^	int _ref;$/;"	m	class:Packet	access:private
+_sa	udp_base.h	/^	struct sockaddr_in _sa;$/;"	m	class:UdpPacket	typeref:struct:UdpPacket::sockaddr_in
+_sa	udp_base.h	/^	struct sockaddr_in _sa;$/;"	m	class:UdpPacket	typeref:struct:UdpPacket::sockaddr_in	access:private
+_server	multicaster.h	/^	string _server;$/;"	m	class:MulticasterUdpServer
+_server	multicaster.h	/^	string _server;$/;"	m	class:MulticasterUdpServer	access:private
+_server	tcp_client.h	/^	string _server;$/;"	m	class:TcpClient
+_server	tcp_client.h	/^	string _server;$/;"	m	class:TcpClient	access:protected
+_server	tcp_server.h	/^	string _server;$/;"	m	class:TcpServer
+_server	tcp_server.h	/^	string _server;$/;"	m	class:TcpServer	access:private
+_server	tcp_server.h	/^	string _server;$/;"	m	class:TcpServerClient
+_server	tcp_server.h	/^	string _server;$/;"	m	class:TcpServerClient	access:protected
+_server	udp_base.h	/^	string _server;$/;"	m	class:UdpBase
+_server	udp_base.h	/^	string _server;$/;"	m	class:UdpBase	access:protected
+_state	tcp_packet.h	/^	unsigned char _state;$/;"	m	class:TcpParser141
+_state	tcp_packet.h	/^	unsigned char _state;$/;"	m	class:TcpParser141	access:private
+_tos	multicaster.cpp	/^deque<MulticasterRelayTo *> MulticasterRelayTo::_tos;$/;"	m	class:MulticasterRelayTo	file:
+_tos	multicaster.h	/^	static deque<MulticasterRelayTo *> _tos;$/;"	m	class:MulticasterRelayTo
+_tos	multicaster.h	/^	static deque<MulticasterRelayTo *> _tos;$/;"	m	class:MulticasterRelayTo	access:protected
+_udps	multicaster.cpp	/^unordered_map<string, struct sockaddr_in> _udps;$/;"	v
+_userId	multicaster.h	/^	string _userId;$/;"	m	class:MulticasterClient
+_userId	multicaster.h	/^	string _userId;$/;"	m	class:MulticasterClient	access:private
+addRef	packet.h	/^	void addRef() {_ref++;}$/;"	f	class:Packet	access:public	signature:()
+addRef	packet.h	/^	void addRef() {_ref++;}$/;"	f	class:Packet	signature:()
+arg	command_option.h	/^        bool arg;$/;"	m	struct:CommandOption::Option
+arg	command_option.h	/^        bool arg;$/;"	m	struct:CommandOption::Option	access:public
+boardcast	multicaster.cpp	/^int MulticasterParser::boardcast(unsigned char *buffer, unsigned int size)$/;"	f	class:MulticasterParser	signature:(unsigned char *buffer, unsigned int size)
+boardcast	multicaster.h	/^	static int boardcast(unsigned char *buffer, unsigned int size);$/;"	p	class:MulticasterParser	access:public	signature:(unsigned char *buffer, unsigned int size)
+boardcast	multicaster.h	/^	static int boardcast(unsigned char *buffer, unsigned int size);$/;"	p	class:MulticasterParser	signature:(unsigned char *buffer, unsigned int size)
+boardcastUdp	multicaster.h	/^	static int boardcastUdp(unsigned char *buffer, unsigned int size);$/;"	p	class:MulticasterParser	access:public	signature:(unsigned char *buffer, unsigned int size)
+boardcastUdp	multicaster.h	/^	static int boardcastUdp(unsigned char *buffer, unsigned int size);$/;"	p	class:MulticasterParser	signature:(unsigned char *buffer, unsigned int size)
+close	net_base.cpp	/^void NetBase::close()$/;"	f	class:NetBase	signature:()
+close	net_base.h	/^	void close();$/;"	p	class:NetBase	access:public	signature:()
+close	net_base.h	/^	void close();$/;"	p	class:NetBase	signature:()
+create	tcp_server.h	/^	virtual TcpServerClient *create(const char *server, unsigned short port, int conn)	= 0;$/;"	p	class:ITcpServerHandler	access:public	signature:(const char *server, unsigned short port, int conn)
+create	tcp_server.h	/^	virtual TcpServerClient *create(const char *server, unsigned short port, int conn)	= 0;$/;"	p	class:ITcpServerHandler	signature:(const char *server, unsigned short port, int conn)
+create	tcp_server.h	/^	virtual TcpServerClient *create(const char *server, unsigned short port, int conn) {return new TCPSERVERCLIENT(server, port, conn);}$/;"	f	class:TcpServerHandler	access:public	signature:(const char *server, unsigned short port, int conn)
+create	tcp_server.h	/^	virtual TcpServerClient *create(const char *server, unsigned short port, int conn) {return new TCPSERVERCLIENT(server, port, conn);}$/;"	f	class:TcpServerHandler	signature:(const char *server, unsigned short port, int conn)
+data	packet.h	/^	virtual unsigned char *data()	= 0;$/;"	p	class:Packet	access:public	signature:()
+data	packet.h	/^	virtual unsigned char *data()	= 0;$/;"	p	class:Packet	signature:()
+data	tcp_packet.h	/^	virtual unsigned char *data() {return _buffer;}$/;"	f	class:TcpPacket141	access:public	signature:()
+data	tcp_packet.h	/^	virtual unsigned char *data() {return _buffer;}$/;"	f	class:TcpPacket141	signature:()
+data	udp_base.h	/^	virtual unsigned char *data() {return _buffer;}$/;"	f	class:UdpPacket	access:public	signature:()
+data	udp_base.h	/^	virtual unsigned char *data() {return _buffer;}$/;"	f	class:UdpPacket	signature:()
+getTickCount	utility.cpp	/^unsigned int getTickCount()$/;"	f	signature:()
+getTickCount	utility.h	/^unsigned int getTickCount();$/;"	p	signature:()
+handleOptionDaemon	main.cpp	/^int handleOptionDaemon(char *argStr)$/;"	f	signature:(char *argStr)
+handleOptionFrom	main.cpp	/^int handleOptionFrom(char *argStr)$/;"	f	signature:(char *argStr)
+handleOptionTo	main.cpp	/^int handleOptionTo(char *argStr)$/;"	f	signature:(char *argStr)
+handler	command_option.h	/^        HandleOption handler;$/;"	m	struct:CommandOption::Option
+handler	command_option.h	/^        HandleOption handler;$/;"	m	struct:CommandOption::Option	access:public
+hex2rev	utility.cpp	/^void hex2rev(unsigned char *buffer, int length, string &str)$/;"	f	signature:(unsigned char *buffer, int length, string &str)
+hex2rev	utility.h	/^void hex2rev(unsigned char *buffer, int length, string &str);$/;"	p	signature:(unsigned char *buffer, int length, string &str)
+hex2str	utility.cpp	/^void hex2str(unsigned char *buffer, unsigned int length, string &str)$/;"	f	signature:(unsigned char *buffer, unsigned int length, string &str)
+hex2str	utility.h	/^void hex2str(unsigned char *buffer, unsigned int length, string &str);$/;"	p	signature:(unsigned char *buffer, unsigned int length, string &str)
+length	packet.h	/^	virtual unsigned int length()	= 0;$/;"	p	class:Packet	access:public	signature:()
+length	packet.h	/^	virtual unsigned int length()	= 0;$/;"	p	class:Packet	signature:()
+length	tcp_packet.h	/^	virtual unsigned int length() {return _length;}$/;"	f	class:TcpPacket141	access:public	signature:()
+length	tcp_packet.h	/^	virtual unsigned int length() {return _length;}$/;"	f	class:TcpPacket141	signature:()
+length	udp_base.h	/^	virtual unsigned int length() {return _length;}$/;"	f	class:UdpPacket	access:public	signature:()
+length	udp_base.h	/^	virtual unsigned int length() {return _length;}$/;"	f	class:UdpPacket	signature:()
+main	main.cpp	/^int main(int argc, char *argv[])$/;"	f	signature:(int argc, char *argv[])
+multicast	multicaster.cpp	/^int MulticasterParser::multicast(unsigned char *buffer, unsigned int len)$/;"	f	class:MulticasterParser	signature:(unsigned char *buffer, unsigned int len)
+multicast	multicaster.h	/^	static int multicast(unsigned char *buffer, unsigned int size);$/;"	p	class:MulticasterParser	access:public	signature:(unsigned char *buffer, unsigned int size)
+multicast	multicaster.h	/^	static int multicast(unsigned char *buffer, unsigned int size);$/;"	p	class:MulticasterParser	signature:(unsigned char *buffer, unsigned int size)
+multicastUdp	multicaster.h	/^	static int multicastUdp(unsigned char *buffer, unsigned int size);$/;"	p	class:MulticasterParser	access:public	signature:(unsigned char *buffer, unsigned int size)
+multicastUdp	multicaster.h	/^	static int multicastUdp(unsigned char *buffer, unsigned int size);$/;"	p	class:MulticasterParser	signature:(unsigned char *buffer, unsigned int size)
+name	command_option.h	/^        string name;$/;"	m	struct:CommandOption::Option
+name	command_option.h	/^        string name;$/;"	m	struct:CommandOption::Option	access:public
+onClose	multicaster.cpp	/^void MulticasterClient::onClose()$/;"	f	class:MulticasterClient	signature:()
+onClose	multicaster.cpp	/^void MulticasterRelayFrom::onClose()$/;"	f	class:MulticasterRelayFrom	signature:()
+onClose	multicaster.cpp	/^void MulticasterRelayTo::onClose()$/;"	f	class:MulticasterRelayTo	signature:()
+onClose	multicaster.h	/^	virtual void onClose();$/;"	p	class:MulticasterClient	access:private	signature:()
+onClose	multicaster.h	/^	virtual void onClose();$/;"	p	class:MulticasterClient	signature:()
+onClose	multicaster.h	/^	virtual void onClose();$/;"	p	class:MulticasterRelayFrom	access:private	signature:()
+onClose	multicaster.h	/^	virtual void onClose();$/;"	p	class:MulticasterRelayFrom	signature:()
+onClose	multicaster.h	/^	virtual void onClose();$/;"	p	class:MulticasterRelayTo	access:protected	signature:()
+onClose	multicaster.h	/^	virtual void onClose();$/;"	p	class:MulticasterRelayTo	signature:()
+onClose	net_base.cpp	/^void NetBase::onClose()$/;"	f	class:NetBase	signature:()
+onClose	net_base.h	/^	virtual void onClose();$/;"	p	class:NetBase	access:protected	signature:()
+onClose	net_base.h	/^	virtual void onClose();$/;"	p	class:NetBase	signature:()
+onClose	tcp_server.cpp	/^void TcpServerClient::onClose()$/;"	f	class:TcpServerClient	signature:()
+onClose	tcp_server.h	/^	virtual void onClose();$/;"	p	class:TcpServerClient	access:protected	signature:()
+onClose	tcp_server.h	/^	virtual void onClose();$/;"	p	class:TcpServerClient	signature:()
+onPacket	multicaster.cpp	/^void MulticasterClient::onPacket(unsigned char *buffer, unsigned int size)$/;"	f	class:MulticasterClient	signature:(unsigned char *buffer, unsigned int size)
+onPacket	multicaster.cpp	/^void MulticasterRelayFrom::onPacket(unsigned char *buffer, unsigned int size)$/;"	f	class:MulticasterRelayFrom	signature:(unsigned char *buffer, unsigned int size)
+onPacket	multicaster.cpp	/^void MulticasterRelayTo::onPacket(unsigned char *buffer, unsigned int size)$/;"	f	class:MulticasterRelayTo	signature:(unsigned char *buffer, unsigned int size)
+onPacket	multicaster.cpp	/^void MulticasterUdpServer::onPacket(unsigned char *buffer, unsigned int size, struct sockaddr *sa)$/;"	f	class:MulticasterUdpServer	signature:(unsigned char *buffer, unsigned int size, struct sockaddr *sa)
+onPacket	multicaster.h	/^	virtual void onPacket(unsigned char *buffer, unsigned int size);$/;"	p	class:MulticasterClient	access:private	signature:(unsigned char *buffer, unsigned int size)
+onPacket	multicaster.h	/^	virtual void onPacket(unsigned char *buffer, unsigned int size);$/;"	p	class:MulticasterClient	signature:(unsigned char *buffer, unsigned int size)
+onPacket	multicaster.h	/^	virtual void onPacket(unsigned char *buffer, unsigned int size);$/;"	p	class:MulticasterRelayFrom	access:private	signature:(unsigned char *buffer, unsigned int size)
+onPacket	multicaster.h	/^	virtual void onPacket(unsigned char *buffer, unsigned int size);$/;"	p	class:MulticasterRelayFrom	signature:(unsigned char *buffer, unsigned int size)
+onPacket	multicaster.h	/^	virtual void onPacket(unsigned char *buffer, unsigned int size);$/;"	p	class:MulticasterRelayTo	access:protected	signature:(unsigned char *buffer, unsigned int size)
+onPacket	multicaster.h	/^	virtual void onPacket(unsigned char *buffer, unsigned int size);$/;"	p	class:MulticasterRelayTo	signature:(unsigned char *buffer, unsigned int size)
+onPacket	multicaster.h	/^	virtual void onPacket(unsigned char *buffer, unsigned int size, struct sockaddr *sa);$/;"	p	class:MulticasterUdpServer	access:protected	signature:(unsigned char *buffer, unsigned int size, struct sockaddr *sa)
+onPacket	multicaster.h	/^	virtual void onPacket(unsigned char *buffer, unsigned int size, struct sockaddr *sa);$/;"	p	class:MulticasterUdpServer	signature:(unsigned char *buffer, unsigned int size, struct sockaddr *sa)
+onPacket	tcp_packet.h	/^	virtual void onPacket(unsigned char *buffer, unsigned int size) = 0;$/;"	p	class:TcpParserHandler	access:public	signature:(unsigned char *buffer, unsigned int size)
+onPacket	tcp_packet.h	/^	virtual void onPacket(unsigned char *buffer, unsigned int size) = 0;$/;"	p	class:TcpParserHandler	signature:(unsigned char *buffer, unsigned int size)
+onPacket	udp_base.h	/^	virtual void onPacket(unsigned char *buffer, unsigned int size, struct sockaddr *sa) {}$/;"	f	class:UdpBase	access:protected	signature:(unsigned char *buffer, unsigned int size, struct sockaddr *sa)
+onPacket	udp_base.h	/^	virtual void onPacket(unsigned char *buffer, unsigned int size, struct sockaddr *sa) {}$/;"	f	class:UdpBase	signature:(unsigned char *buffer, unsigned int size, struct sockaddr *sa)
+onRecv	net_base.h	/^	virtual void onRecv() {}$/;"	f	class:NetBase	access:protected	signature:()
+onRecv	net_base.h	/^	virtual void onRecv() {}$/;"	f	class:NetBase	signature:()
+onRecv	tcp_client.cpp	/^void TcpClient::onRecv()$/;"	f	class:TcpClient	signature:()
+onRecv	tcp_client.h	/^	virtual void onRecv();$/;"	p	class:TcpClient	access:protected	signature:()
+onRecv	tcp_client.h	/^	virtual void onRecv();$/;"	p	class:TcpClient	signature:()
+onRecv	tcp_server.cpp	/^void TcpServer::onRecv()$/;"	f	class:TcpServer	signature:()
+onRecv	tcp_server.cpp	/^void TcpServerClient::onRecv()$/;"	f	class:TcpServerClient	signature:()
+onRecv	tcp_server.h	/^	virtual void onRecv();$/;"	p	class:TcpServer	access:protected	signature:()
+onRecv	tcp_server.h	/^	virtual void onRecv();$/;"	p	class:TcpServer	signature:()
+onRecv	tcp_server.h	/^	virtual void onRecv();$/;"	p	class:TcpServerClient	access:protected	signature:()
+onRecv	tcp_server.h	/^	virtual void onRecv();$/;"	p	class:TcpServerClient	signature:()
+onRecv	udp_base.cpp	/^void UdpBase::onRecv()$/;"	f	class:UdpBase	signature:()
+onRecv	udp_base.h	/^	virtual void onRecv();$/;"	p	class:UdpBase	access:protected	signature:()
+onRecv	udp_base.h	/^	virtual void onRecv();$/;"	p	class:UdpBase	signature:()
+onSend	net_base.cpp	/^void NetBase::onSend()$/;"	f	class:NetBase	signature:()
+onSend	net_base.h	/^	virtual int onSend(unsigned char *buffer, unsigned int size, Packet *packet) {return 0;}$/;"	f	class:NetBase	access:protected	signature:(unsigned char *buffer, unsigned int size, Packet *packet)
+onSend	net_base.h	/^	virtual int onSend(unsigned char *buffer, unsigned int size, Packet *packet) {return 0;}$/;"	f	class:NetBase	signature:(unsigned char *buffer, unsigned int size, Packet *packet)
+onSend	net_base.h	/^	void onSend();$/;"	p	class:NetBase	access:protected	signature:()
+onSend	net_base.h	/^	void onSend();$/;"	p	class:NetBase	signature:()
+onSend	tcp_client.cpp	/^int TcpClient::onSend(unsigned char *buffer, unsigned int size, Packet *packet)$/;"	f	class:TcpClient	signature:(unsigned char *buffer, unsigned int size, Packet *packet)
+onSend	tcp_client.h	/^	virtual int onSend(unsigned char *buffer, unsigned int size, Packet *packet);$/;"	p	class:TcpClient	access:protected	signature:(unsigned char *buffer, unsigned int size, Packet *packet)
+onSend	tcp_client.h	/^	virtual int onSend(unsigned char *buffer, unsigned int size, Packet *packet);$/;"	p	class:TcpClient	signature:(unsigned char *buffer, unsigned int size, Packet *packet)
+onSend	tcp_server.cpp	/^int TcpServerClient::onSend(unsigned char *buffer, unsigned int size, Packet *packet)$/;"	f	class:TcpServerClient	signature:(unsigned char *buffer, unsigned int size, Packet *packet)
+onSend	tcp_server.h	/^	virtual int onSend(unsigned char *buffer, unsigned int size, Packet *packet);$/;"	p	class:TcpServerClient	access:protected	signature:(unsigned char *buffer, unsigned int size, Packet *packet)
+onSend	tcp_server.h	/^	virtual int onSend(unsigned char *buffer, unsigned int size, Packet *packet);$/;"	p	class:TcpServerClient	signature:(unsigned char *buffer, unsigned int size, Packet *packet)
+onSend	udp_base.cpp	/^int UdpBase::onSend(unsigned char *buffer, unsigned int size, Packet *packet)$/;"	f	class:UdpBase	signature:(unsigned char *buffer, unsigned int size, Packet *packet)
+onSend	udp_base.h	/^	virtual int onSend(unsigned char *buffer, unsigned int size, Packet *packet);$/;"	p	class:UdpBase	access:protected	signature:(unsigned char *buffer, unsigned int size, Packet *packet)
+onSend	udp_base.h	/^	virtual int onSend(unsigned char *buffer, unsigned int size, Packet *packet);$/;"	p	class:UdpBase	signature:(unsigned char *buffer, unsigned int size, Packet *packet)
+parse	command_option.h	/^    int parse(int argc, char *argv[])$/;"	f	class:CommandOption	access:public	signature:(int argc, char *argv[])
+parse	command_option.h	/^    int parse(int argc, char *argv[])$/;"	f	class:CommandOption	signature:(int argc, char *argv[])
+parse	tcp_packet.cpp	/^void TcpParser141::parse(unsigned char *buffer, unsigned int size, TcpParserHandler *handler)$/;"	f	class:TcpParser141	signature:(unsigned char *buffer, unsigned int size, TcpParserHandler *handler)
+parse	tcp_packet.h	/^	virtual void parse(unsigned char *buffer, unsigned int size, TcpParserHandler *handler) = 0;$/;"	p	class:ITcpParser	access:public	signature:(unsigned char *buffer, unsigned int size, TcpParserHandler *handler)
+parse	tcp_packet.h	/^	virtual void parse(unsigned char *buffer, unsigned int size, TcpParserHandler *handler) = 0;$/;"	p	class:ITcpParser	signature:(unsigned char *buffer, unsigned int size, TcpParserHandler *handler)
+parse	tcp_packet.h	/^	virtual void parse(unsigned char *buffer, unsigned int size, TcpParserHandler *handler);$/;"	p	class:TcpParser141	access:public	signature:(unsigned char *buffer, unsigned int size, TcpParserHandler *handler)
+parse	tcp_packet.h	/^	virtual void parse(unsigned char *buffer, unsigned int size, TcpParserHandler *handler);$/;"	p	class:TcpParser141	signature:(unsigned char *buffer, unsigned int size, TcpParserHandler *handler)
+parser	multicaster.h	/^	virtual ITcpParser *parser() {return &_parser;}$/;"	f	class:MulticasterRelayFrom	access:public	signature:()
+parser	multicaster.h	/^	virtual ITcpParser *parser() {return &_parser;}$/;"	f	class:MulticasterRelayFrom	signature:()
+parser	multicaster.h	/^	virtual ITcpParser *parser() {return &_parser;}$/;"	f	class:MulticasterRelayTo	access:public	signature:()
+parser	multicaster.h	/^	virtual ITcpParser *parser() {return &_parser;}$/;"	f	class:MulticasterRelayTo	signature:()
+parser	multicaster.h	/^	virtual ITcpParser *parser() {return &_parser;};$/;"	f	class:MulticasterClient	access:public	signature:()
+parser	multicaster.h	/^	virtual ITcpParser *parser() {return &_parser;};$/;"	f	class:MulticasterClient	signature:()
+parser	tcp_client.h	/^	virtual ITcpParser *parser()	= 0;$/;"	p	class:TcpClient	access:public	signature:()
+parser	tcp_client.h	/^	virtual ITcpParser *parser()	= 0;$/;"	p	class:TcpClient	signature:()
+parser	tcp_server.h	/^	virtual ITcpParser *parser()	= 0;$/;"	p	class:TcpServerClient	access:public	signature:()
+parser	tcp_server.h	/^	virtual ITcpParser *parser()	= 0;$/;"	p	class:TcpServerClient	signature:()
+registerOption	command_option.h	/^    CommandOption *registerOption(const char *optionName, bool arg, HandleOption handler, const char *tip = 0)$/;"	f	class:CommandOption	access:public	signature:(const char *optionName, bool arg, HandleOption handler, const char *tip = 0)
+registerOption	command_option.h	/^    CommandOption *registerOption(const char *optionName, bool arg, HandleOption handler, const char *tip = 0)$/;"	f	class:CommandOption	signature:(const char *optionName, bool arg, HandleOption handler, const char *tip = 0)
+relay	multicaster.cpp	/^void MulticasterRelayFrom::relay(unsigned char *buffer, unsigned int size)$/;"	f	class:MulticasterRelayFrom	signature:(unsigned char *buffer, unsigned int size)
+relay	multicaster.cpp	/^void MulticasterRelayTo::relay(unsigned char *buffer, unsigned int size)$/;"	f	class:MulticasterRelayTo	signature:(unsigned char *buffer, unsigned int size)
+relay	multicaster.h	/^	static void relay(unsigned char *buffer, unsigned int size);$/;"	p	class:MulticasterRelayFrom	access:public	signature:(unsigned char *buffer, unsigned int size)
+relay	multicaster.h	/^	static void relay(unsigned char *buffer, unsigned int size);$/;"	p	class:MulticasterRelayFrom	signature:(unsigned char *buffer, unsigned int size)
+relay	multicaster.h	/^	static void relay(unsigned char *buffer, unsigned int size);$/;"	p	class:MulticasterRelayTo	access:public	signature:(unsigned char *buffer, unsigned int size)
+relay	multicaster.h	/^	static void relay(unsigned char *buffer, unsigned int size);$/;"	p	class:MulticasterRelayTo	signature:(unsigned char *buffer, unsigned int size)
+release	packet.h	/^	void release()$/;"	f	class:Packet	access:public	signature:()
+release	packet.h	/^	void release()$/;"	f	class:Packet	signature:()
+release	udp_base.h	/^	virtual void release()$/;"	f	class:UdpPacket	access:public	signature:()
+release	udp_base.h	/^	virtual void release()$/;"	f	class:UdpPacket	signature:()
+run	net_base.cpp	/^void NetBase::run()$/;"	f	class:NetBase	signature:()
+run	net_base.h	/^	static void run();$/;"	p	class:NetBase	access:public	signature:()
+run	net_base.h	/^	static void run();$/;"	p	class:NetBase	signature:()
+saAddr	udp_base.h	/^	struct sockaddr *saAddr() {return (struct sockaddr *)&_sa;}$/;"	f	class:UdpPacket	access:public	signature:()
+saAddr	udp_base.h	/^	struct sockaddr *saAddr() {return (struct sockaddr *)&_sa;}$/;"	f	class:UdpPacket	signature:()
+send	net_base.cpp	/^void NetBase::send(Packet *packet)$/;"	f	class:NetBase	signature:(Packet *packet)
+send	net_base.h	/^	void send(Packet *packet);$/;"	p	class:NetBase	access:public	signature:(Packet *packet)
+send	net_base.h	/^	void send(Packet *packet);$/;"	p	class:NetBase	signature:(Packet *packet)
+start	net_base.cpp	/^void NetBase::start(int fp)$/;"	f	class:NetBase	signature:(int fp)
+start	net_base.h	/^	void start(int fp);$/;"	p	class:NetBase	access:protected	signature:(int fp)
+start	net_base.h	/^	void start(int fp);$/;"	p	class:NetBase	signature:(int fp)
+start	tcp_client.cpp	/^void TcpClient::start()$/;"	f	class:TcpClient	signature:()
+start	tcp_client.h	/^	void start();$/;"	p	class:TcpClient	access:public	signature:()
+start	tcp_client.h	/^	void start();$/;"	p	class:TcpClient	signature:()
+strreplace	utility.cpp	/^void strreplace(string &src, const char *from, const char *to)$/;"	f	signature:(string &src, const char *from, const char *to)
+strreplace	utility.h	/^void strreplace(string &src, const char *from, const char *to);$/;"	p	signature:(string &src, const char *from, const char *to)
+strsplit	utility.cpp	/^int strsplit(char *src, const char *delimiters, char **dest, int size)$/;"	f	signature:(char *src, const char *delimiters, char **dest, int size)
+strsplit	utility.h	/^int strsplit(char *src, const char *delimiters, char **dest, int size);$/;"	p	signature:(char *src, const char *delimiters, char **dest, int size)
+tip	command_option.h	/^        string tip;$/;"	m	struct:CommandOption::Option
+tip	command_option.h	/^        string tip;$/;"	m	struct:CommandOption::Option	access:public
+~NetBase	net_base.cpp	/^NetBase::~NetBase()$/;"	f	class:NetBase	signature:()
+~NetBase	net_base.h	/^	virtual ~NetBase();$/;"	p	class:NetBase	access:public	signature:()
+~NetBase	net_base.h	/^	virtual ~NetBase();$/;"	p	class:NetBase	signature:()
+~TcpPacket141	tcp_packet.cpp	/^TcpPacket141::~TcpPacket141()$/;"	f	class:TcpPacket141	signature:()
+~TcpPacket141	tcp_packet.h	/^	virtual ~TcpPacket141();$/;"	p	class:TcpPacket141	access:public	signature:()
+~TcpPacket141	tcp_packet.h	/^	virtual ~TcpPacket141();$/;"	p	class:TcpPacket141	signature:()
+~TcpParser141	tcp_packet.h	/^	virtual ~TcpParser141()$/;"	f	class:TcpParser141	access:public	signature:()
+~TcpParser141	tcp_packet.h	/^	virtual ~TcpParser141()$/;"	f	class:TcpParser141	signature:()
